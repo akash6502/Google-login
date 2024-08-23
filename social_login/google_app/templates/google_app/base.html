@@ -1,0 +1,9 @@
+<!-- templates/base.html -->
+{% load socialaccount %}
+<nav>
+    {% if user.is_authenticated %}
+        <a href="{% url 'account_logout' %}">Logout</a>
+    {% else %}
+        <a href="{% url 'account_login' %}">Login</a>
+    {% endif %}
+</nav>
